@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "330570815237",
+    "project_id": "kaagnews",
+    "storage_bucket": "kaagnews.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330570815237:android:d638c91d3fe40aa0b6c96c",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTQg4SmcE8kaZzeJ6M6AOUtIFgG6ZVkFM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,34 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "kaagnews",
+          "appId": "1:330570815237:android:d638c91d3fe40aa0b6c96c",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "kaagnews",
+          "configurations": {
+            "android": "1:330570815237:android:d638c91d3fe40aa0b6c96c",
+            "ios": "1:330570815237:ios:59a89299c0ba8188b6c96c",
+            "macos": "1:330570815237:ios:59a89299c0ba8188b6c96c",
+            "web": "1:330570815237:web:6b7455722d7219ddb6c96c",
+            "windows": "1:330570815237:web:9ec498cce469d4a9b6c96c"
+          }
+        }
+      }
+    }
+  },
+  "firestore": {
+    "database": "(default)",
+    "location": "nam5",
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "functions": {
+    "source": "functions"
+  }
+}

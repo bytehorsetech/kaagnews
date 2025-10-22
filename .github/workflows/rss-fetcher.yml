@@ -1,0 +1,33 @@
+
+name: Fetch RSS Feeds
+
+on:
+  schedule:
+    # Runs every 15 minutes. You can change this to a different frequency.
+    - cron:  '*/15 * * * *'
+  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+
+jobs:
+  fetch-and-store-articles:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18' # Using Node.js version 18
+
+    - name: Install dependencies
+      working-directory: ./functions
+      run: npm install
+
+    - name: Run the fetcher script
+      working-directory: ./functions
+      run: node index.js
+      env:
+        # The following secret needs to be created in your GitHub repository settings.
+        # It will contain the JSON key for a Firebase service account.
+        FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
